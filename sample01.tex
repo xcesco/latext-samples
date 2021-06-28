@@ -1,11 +1,51 @@
-\documentclass{article}
+\documentclass[a4paper,12pt,twoside]{article}
+
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+
+\author{}
+\title{}
+
+\makeatletter
+	\newenvironment{indentation}[3]%
+	{\par\setlength{\parindent}{#3}
+	\setlength{\leftmargin}{#1}       \setlength{\rightmargin}{#2}%
+	\advance\linewidth -\leftmargin       \advance\linewidth -\rightmargin%
+	\advance\@totalleftmargin\leftmargin  \@setpar{{\@@par}}%
+	\parshape 1\@totalleftmargin \linewidth\ignorespaces}{\par}%
+\makeatother 
+
 %Path relative to the main .tex file 
-\graphicspath{ {./images/} }
-
+\graphicspath{./images}
 \begin{document}
-First document. This is a simple example, with no 
-extra parameters or packages included.
 
-\includegraphics[width=5cm, height=4cm]{logo_regione.png}
+
+\includegraphics[scale=1]{./images/logo_atto.jpg}
+
+{\raggedright
+\begin{indentation}{72pt}{0pt}{0pt}
+\textsf{SOLICITUD DE sss\'{O}N DE PROYECTO Y ASESOR}
+\end{indentation}
+}
+
+{\raggedright
+\begin{indentation}{223pt}{0pt}{0pt}
+\textsf{{\normalsize M\'{e}rida, Yucat\'{a}n, 11 de octubre de 2015.}}
+\end{indentation}
+}
+
+
+{\raggedright
+\begin{indentation}{0pt}{0pt}{0pt}
+\textsf{C. }{\small Martha Imelda Jarero Kumul}
+\end{indentation}
+}
+
+{\raggedright
+\begin{indentation}{0pt}{0pt}{0pt}
+\textsf{Secretario Acad\'{e}mico}
+\end{indentation}
+}
+
 
 \end{document}
